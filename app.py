@@ -21,11 +21,11 @@ def get_data():
         host="localhost",
         user="root",
         password="root",
-        database="flask"
+        database="flask_app"
     )
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM users_auth")
+    cursor.execute("SELECT * FROM user_auth")
     data = cursor.fetchall()
     return jsonify(data)
 
